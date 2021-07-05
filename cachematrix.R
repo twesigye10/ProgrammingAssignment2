@@ -4,12 +4,34 @@
 ## Write a short comment describing this function
 
 makeCacheMatrix <- function(x = matrix()) {
-
+  inv <- NULL
+  
+  if (nrow(x) != ncol(x)) {
+    stop("It is not a square matrix")
+  } 
+  
+  set <- function(y) {
+    x <<- y
+    inv <<- x
+  }
+  get <- function(){
+    x
+  }
+  setinverse <- function(solve) {
+    inv <<- solve
+  }
+  getinverse <- function() {
+    inv
+  }
+  
+  list(set = set, get = get,
+       setinverse = setinverse,
+       getinverse = getinverse)
 }
 
 
 ## Write a short comment describing this function
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+  ## Return a matrix that is the inverse of 'x'
 }
