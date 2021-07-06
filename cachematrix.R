@@ -2,6 +2,8 @@
 ## functions do
 
 ## Write a short comment describing this function
+# This function takes in a square matrix and if it is not square matrix,
+# it stops running
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
   
